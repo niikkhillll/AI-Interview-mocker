@@ -1,125 +1,119 @@
-# AI Mock Interviewer - Backend & Frontend
+# AI Interview Mocker
 
 ## 📌 Overview
 
-**AI Mock Interviewer** is a platform that provides mock interview questions and evaluates user responses using AI. The project includes both **backend (Node.js, Express, LangChain.js)** and **frontend (React.js)** components.
+**AI Interview Mocker** is a modern web application that provides AI-powered mock interviews. Built with Next.js and leveraging Google's Generative AI, it helps users practice technical interviews with real-time feedback. The application features user authentication, interview recording, and AI-powered analysis of responses.
 
 Developed by **Nikhil Kumar Singh** ([@niikkhillll](https://github.com/niikkhillll))
 
----
-
 ## 🚀 Features
 
-- 🔐 **User Authentication**
-- 📌 **Select Field & Experience Level**
-- 🎤 **Record Audio & Video Responses**
-- 🧠 **AI Feedback on Answers**
-- 🎨 **Interactive User Interface**
-- 📊 **Performance Analytics**
-- 🔄 **Real-time Response Evaluation**
-
----
+- 🔐 **Secure Authentication** with Clerk
+- 🎤 **Speech-to-Text** for natural response capture
+- � **Video Recording** for interview practice
+- � **AI-Powered Feedback** using Google's Generative AI
+- 🎨 **Modern UI** with Tailwind CSS and Radix UI
+- 🌓 **Dark/Light Mode** support
+- 📊 **Real-time Analysis** of interview responses
+- 💾 **Database Integration** with Drizzle ORM
 
 ## 🏗 Project Structure
 
 ```
-/AI-Interview-mocker
-├── /backend/          # Node.js & Express server
-├── /frontend/         # React.js application
+/ai-interview-mocker
+├── /app/               # Next.js 13+ app directory
+│   ├── /api/           # API routes
+│   ├── (auth)/         # Authentication pages
+│   └── (dashboard)/    # Main application pages
+├── /components/        # Reusable React components
+│   ├── /ui/           # UI components (shadcn/ui)
+│   └── ...            # Other components
+├── /lib/              # Utility functions and configurations
+├── /public/           # Static assets
+├── /utils/            # Helper functions
+├── package.json       # Project dependencies
 └── README.md          # Project documentation
 ```
 
----
+## 🛠️ Tech Stack
 
-## �️ Setup & Installation
+- **Frontend**: Next.js 14, React 18, TypeScript
+- **Styling**: Tailwind CSS, shadcn/ui
+- **AI**: Google Generative AI
+- **Database**: PostgreSQL (Neon)
+- **ORM**: Drizzle ORM
+- **Authentication**: Clerk
+- **Deployment**: Vercel
+
+## 🚀 Getting Started
 
 ### Prerequisites
-- Node.js (v14+)
-- npm or yarn
-- Google Gemini API Key
 
-### Backend Setup
+- Node.js 18+
+- npm or yarn
+- Google Cloud API Key (for Generative AI)
+- Clerk Account (for authentication)
+- Neon Database (or any PostgreSQL database)
+
+### Installation
 
 1. Clone the repository:
-   ```sh
-   git clone https://github.com/niikkhillll/AI-Interview-mocker.git
-   cd AI-Interview-mocker/backend
+   ```bash
+   git clone https://github.com/niikkhillll/ai-interview-mocker.git
+   cd ai-interview-mocker
    ```
 
 2. Install dependencies:
-   ```sh
+   ```bash
    npm install
+   # or
+   yarn
    ```
 
-3. Create a `.env` file in the backend directory and add your API key:
+3. Set up environment variables:
    ```env
-   GEMINI_API_KEY=your_gemini_api_key
-   PORT=5000
+   # Clerk
+   NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
+   CLERK_SECRET_KEY=your_clerk_secret_key
+   NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+   NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+   NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/dashboard
+   NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/dashboard
+
+   # Database
+   DATABASE_URL=your_database_url
+
+   # Google AI
+   GOOGLE_AI_API_KEY=your_google_ai_key
    ```
 
-4. Start the development server:
-   ```sh
-   npm start
-   ```
-   The backend will be available at `http://localhost:5000`
-
-### Frontend Setup
-
-1. Navigate to the frontend directory:
-   ```sh
-   cd ../frontend
+4. Run the development server:
+   ```bash
+   npm run dev
+   # or
+   yarn dev
    ```
 
-2. Install dependencies:
-   ```sh
-   npm install
-   ```
+   Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-3. Start the development server:
-   ```sh
-   npm start
-   ```
-   The frontend will be available at `http://localhost:5173`
+## 🧪 Running Tests
 
----
+```bash
+npm test
+# or
+yarn test
+```
 
 ## 🚀 Deployment
 
-### Vercel Deployment
-
-1. Install Vercel CLI:
-   ```sh
-   npm install -g vercel
-   ```
-
-2. Deploy backend:
-   ```sh
-   cd backend
-   vercel --prod
-   ```
-
-3. Deploy frontend:
-   ```sh
-   cd ../frontend
-   vercel --prod
-   ```
-
----
-
-## 🛠️ Built With
-
-- **Frontend**: React.js, TailwindCSS
-- **Backend**: Node.js, Express
-- **AI/ML**: Google Gemini API, LangChain.js
-- **Authentication**: JWT
-- **Database**: MongoDB
-- **Deployment**: Vercel
-
----
+1. Push to GitHub
+2. Connect your GitHub repository to Vercel
+3. Set up environment variables in Vercel
+4. Deploy!
 
 ## 🤝 Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+Contributions are welcome! Please follow these steps:
 
 1. Fork the repository
 2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
@@ -127,13 +121,9 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
----
-
 ## 📜 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
 
 ## 👨‍💻 Author
 
@@ -141,12 +131,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - GitHub: [@niikkhillll](https://github.com/niikkhillll)
 - Email: nikhil05raghuwanshi@gmail.com
 
----
-
 ## 🙏 Acknowledgments
 
-- [LangChain.js](https://js.langchain.com/) for AI integration
-- [Google Gemini](https://ai.google.dev/) for powerful AI capabilities
-- All the open-source libraries used in this project
-
-🚀 Happy Coding!
+- [Next.js](https://nextjs.org/) for the amazing framework
+- [shadcn/ui](https://ui.shadcn.com/) for beautiful components
+- [Clerk](https://clerk.com/) for authentication
+- [Google AI](https://ai.google.dev/) for the powerful AI capabilities
