@@ -4,6 +4,8 @@
 
 **AI Mock Interviewer** is a platform that provides mock interview questions and evaluates user responses using AI. The project includes both **backend (Node.js, Express, LangChain.js)** and **frontend (React.js)** components.
 
+Developed by **Nikhil Kumar Singh** ([@niikkhillll](https://github.com/niikkhillll))
+
 ---
 
 ## 🚀 Features
@@ -12,113 +14,139 @@
 - 📌 **Select Field & Experience Level**
 - 🎤 **Record Audio & Video Responses**
 - 🧠 **AI Feedback on Answers**
-- 🎨 **Frontend for User Interaction**
+- 🎨 **Interactive User Interface**
+- 📊 **Performance Analytics**
+- 🔄 **Real-time Response Evaluation**
 
 ---
 
 ## 🏗 Project Structure
 
 ```
-/Ai-Mock-Interviewer
-│── /backend
-│── /frontend
+/AI-Interview-mocker
+├── /backend/          # Node.js & Express server
+├── /frontend/         # React.js application
+└── README.md          # Project documentation
 ```
 
 ---
 
-## 🔧 AI Mock Interviewer Setup
+## �️ Setup & Installation
 
-### Backend
+### Prerequisites
+- Node.js (v14+)
+- npm or yarn
+- Google Gemini API Key
 
-1️⃣ Clone the Repository:
+### Backend Setup
 
-```sh
-git clone https://github.com/PriyanshuG24/Ai_Mock_Interviewer.git
-cd Ai-Mock-Interviewer/backend
-```
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/niikkhillll/AI-Interview-mocker.git
+   cd AI-Interview-mocker/backend
+   ```
 
-2️⃣ Install Dependencies:
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
 
-```sh
-npm install
-```
+3. Create a `.env` file in the backend directory and add your API key:
+   ```env
+   GEMINI_API_KEY=your_gemini_api_key
+   PORT=5000
+   ```
 
-3️⃣ Configure Environment Variables:
+4. Start the development server:
+   ```sh
+   npm start
+   ```
+   The backend will be available at `http://localhost:5000`
 
-```sh
-GEMINI_API_KEY=your_gemini_api_key
-```
+### Frontend Setup
 
-4️⃣ Start the Server:
+1. Navigate to the frontend directory:
+   ```sh
+   cd ../frontend
+   ```
 
-```sh
-npm start
-```
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
 
-Backend runs on `http://localhost:5000`.
-
-### Frontend
-
-1️⃣ Navigate to Frontend:
-
-```sh
-cd ../frontend
-```
-
-2️⃣ Install Dependencies:
-
-```sh
-npm install
-```
-
-3️⃣ Start the Frontend:
-
-```sh
-npm start
-```
-
-Frontend runs on `http://localhost:5173`.
+3. Start the development server:
+   ```sh
+   npm start
+   ```
+   The frontend will be available at `http://localhost:5173`
 
 ---
 
-## 🚀 Deployment (Vercel)
+## 🚀 Deployment
 
-### Backend Deployment
+### Vercel Deployment
 
-```sh
-npm install -g vercel
-vercel --prod
-```
+1. Install Vercel CLI:
+   ```sh
+   npm install -g vercel
+   ```
 
-### Frontend Deployment
+2. Deploy backend:
+   ```sh
+   cd backend
+   vercel --prod
+   ```
 
-```sh
-cd frontend
-vercel --prod
-```
-
-Ensure backend URL is correctly set in the frontend.
+3. Deploy frontend:
+   ```sh
+   cd ../frontend
+   vercel --prod
+   ```
 
 ---
 
-## 🛠 Built With
+## 🛠️ Built With
 
-- **Node.js & Express** - Backend Framework
-- **LangChain.js** - AI Model Integration
-- **Gemini API** - AI Text Generation & Evaluation
-- **React.js** - Frontend UI
+- **Frontend**: React.js, TailwindCSS
+- **Backend**: Node.js, Express
+- **AI/ML**: Google Gemini API, LangChain.js
+- **Authentication**: JWT
+- **Database**: MongoDB
+- **Deployment**: Vercel
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
 ---
 
 ## 📜 License
 
-This project is **open-source** under the MIT License.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
-## ✨ Contributors
+## 👨‍💻 Author
 
-- [PriyanshuG24](https://github.com/PriyanshuG24)
+**Nikhil Kumar Singh**  
+- GitHub: [@niikkhillll](https://github.com/niikkhillll)
+- Email: nikhil05raghuwanshi@gmail.com
+
+---
+
+## 🙏 Acknowledgments
+
+- [LangChain.js](https://js.langchain.com/) for AI integration
+- [Google Gemini](https://ai.google.dev/) for powerful AI capabilities
+- All the open-source libraries used in this project
 
 🚀 Happy Coding!
-
